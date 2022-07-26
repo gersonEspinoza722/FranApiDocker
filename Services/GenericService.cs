@@ -14,6 +14,11 @@ namespace FranApiDocker.Services
         private readonly DataContext _context;
 
         private readonly IMapper _mapper;
+    public GenericService(DataContext context, IMapper mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
 
  public async Task<ServiceResponse<List<TDto>>> Add(TEntity entity)
         {

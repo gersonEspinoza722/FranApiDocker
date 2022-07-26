@@ -1,11 +1,12 @@
 using FranApiDocker.Dtos;
+using FranApiDocker.Models;
 using FranApiDocker.Services;
 
 namespace FranApiDocker.Controllers
 {
-    public class OfficeController : GenericController<OfficeController, GetOfficeDto>
+    public class OfficeController : GenericController<Office, GetOfficeDto>
     {
-        public OfficeController(IService<OfficeController, GetOfficeDto> service) : base(service)
+        public OfficeController(IService<Office, GetOfficeDto> service) : base(service)
         {
         }
     }
